@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+    <style>
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p><strong>Author(s):</strong> {{ book.authors }}</p>
+    <p><strong>Genre:</strong> {{ book.genre }}</p>
+    <p><strong>Publication Date:</strong> {{ book.publication_date }}</p>
+    <p><strong>Description:</strong> {{ book.description }}</p>
+    <form method="post">
+        {% csrf_token %}
+        
+        <button type="submit">Update Book</button>
+        <button type="submit">Delete Book</button>
+    </form>
+</body>
+</html>
